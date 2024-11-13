@@ -30,3 +30,19 @@ public class Main {
                     null,
                     options,
                     options[0]);
+            // Handling exit condition
+            if (choice == 2 || choice == -1) {
+                if (!students.isEmpty() || !staff.isEmpty()) {
+                    generateReport();
+                }
+                break;
+            }
+
+            // Processing user selection
+            if (choice == 0) {
+                addStudent();
+            } else {
+                addStaff();
+            }
+        }
+    }
