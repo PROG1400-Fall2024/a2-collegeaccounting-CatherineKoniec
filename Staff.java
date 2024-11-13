@@ -1,3 +1,7 @@
+// Student: Catherine Koniec
+// Student #: W0497826
+// Description: Assignment 2 - College Accounting Application
+
 // Staff class for managing employee information and payroll
 public class Staff extends Person {
     private int yearsOfService;
