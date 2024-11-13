@@ -16,3 +16,10 @@ public class Staff extends Person {
     public double getBiWeeklyPay() {
         return salary / 26;
     }
+    // Formatting staff information for display
+    @Override
+    public String toString() {
+        return String.format("name = %s, address = %s, years = %d, pay = $%.2f",
+                getName(), getAddress(), yearsOfService, salary);
+    }
+}
