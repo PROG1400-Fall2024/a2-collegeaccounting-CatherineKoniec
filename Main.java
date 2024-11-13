@@ -46,3 +46,25 @@ public class Main {
             }
         }
     }
+    /* Handles the addition of a new student
+     * Validates student year (1-4)
+     * Collects and validates name and address
+     * Creates new student object and adds to collection
+     */
+    private void addStudent() {
+        try {
+            String yearStr = getValidInput("Enter student year (1-4)");
+            int year = Integer.parseInt(yearStr);
+            if (year < 1 || year > 4) {
+                JOptionPane.showMessageDialog(null, "Year must be between 1 and 4");
+                return;
+            }
+
+            String name = getValidInput("Enter Student Name");
+            String address = getValidInput("Enter Student Address");
+
+            students.add(new Student(name, address, year));
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Please enter a number.");
+        }
+    }
