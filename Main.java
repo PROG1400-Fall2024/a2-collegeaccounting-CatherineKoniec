@@ -110,3 +110,18 @@ public class Main {
 
         double totalOutgoing = 0;
         double totalIncoming = 0;
+        // Adding student section
+        report.append("Students: [Total: ").append(students.size()).append("]\n");
+        for (int i = 0; i < students.size(); i++) {
+            Student student = students.get(i);
+            report.append(i + 1).append(".").append(student.toString()).append("\n");
+            totalIncoming += student.getInstallment();
+        }
+
+        // Adding staff section
+        report.append("\nStaff: [Total: ").append(staff.size()).append("]\n");
+        for (int i = 0; i < staff.size(); i++) {
+            Staff staffMember = staff.get(i);
+            report.append(i + 1).append(".").append(staffMember.toString()).append("\n");
+            totalOutgoing += staffMember.getBiWeeklyPay();
+        }
