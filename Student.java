@@ -16,3 +16,16 @@ public class Student extends Person {
         this.year = year;
         this.fees = 3000 + ((year - 1) * 100);
     }
+
+    // Calculating semester installment (half of total fees)
+    public double getInstallment() {
+        return fees / 2;
+    }
+
+    // Formatting student information for display
+    @Override
+    public String toString() {
+        return String.format("name = %s, address = %s, year = %d, fee = $%.2f",
+                getName(), getAddress(), year, fees);
+    }
+}
