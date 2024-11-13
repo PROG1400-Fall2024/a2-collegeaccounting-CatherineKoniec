@@ -12,3 +12,7 @@ public class Staff extends Person {
         this.yearsOfService = yearsOfService;
         this.salary = 50000 + (yearsOfService * 500);
     }
+    // Calculating bi-weekly pay (yearly salary divided by 26)
+    public double getBiWeeklyPay() {
+        return salary / 26;
+    }
