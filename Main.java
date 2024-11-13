@@ -99,3 +99,14 @@ public class Main {
         }
         return input.trim();
     }
+    /* Generates final financial report
+     * Calculates total incoming fees from students
+     * Calculates total outgoing payments to staff
+     * Displays formatted report with all details and totals
+     */
+    private void generateReport() {
+        NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.US);
+        StringBuilder report = new StringBuilder();
+
+        double totalOutgoing = 0;
+        double totalIncoming = 0;
