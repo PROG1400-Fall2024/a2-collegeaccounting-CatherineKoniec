@@ -19,3 +19,8 @@ public abstract class Person {
     public String getAddress() {
         return address;
     }
+
+    // Abstract toString method to be implemented by subclasses
+    @Override
+    public abstract String toString();
+}
