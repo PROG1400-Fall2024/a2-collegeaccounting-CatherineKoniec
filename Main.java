@@ -68,3 +68,25 @@ public class Main {
             JOptionPane.showMessageDialog(null, "Please enter a number.");
         }
     }
+    /* Adding new staff member to system:
+     * Validates years of service (0-30)
+     * Collects and validates name and address
+     * Creates new Staff object and adds to collection
+     */
+    private void addStaff() {
+        try {
+            String name = getValidInput("Enter Staff Name");
+            String address = getValidInput("Enter Staff Address");
+            String yearsStr = getValidInput("Enter staff years of service");
+
+            int years = Integer.parseInt(yearsStr);
+            if (years < 0 || years > 30) {
+                JOptionPane.showMessageDialog(null, "Years must be between 0 and 30");
+                return;
+            }
+
+            staff.add(new Staff(name, address, years));
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Please enter a number.");
+        }
+    }
