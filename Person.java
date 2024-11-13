@@ -1,3 +1,7 @@
+// Student: Catherine Koniec
+// Student #: W0497826
+// Description: Assignment 2 - College Accounting Application
+
 // Base class for all persons in the system
 public abstract class Person {
     private String name;
