@@ -90,3 +90,12 @@ public class Main {
             JOptionPane.showMessageDialog(null, "Please enter a number.");
         }
     }
+    // Validating user input: Ensures input is not null or empty
+    private String getValidInput(String prompt) {
+        String input = JOptionPane.showInputDialog(prompt);
+        if (input == null || input.trim().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please enter valid information");
+            throw new IllegalArgumentException("Invalid input");
+        }
+        return input.trim();
+    }
