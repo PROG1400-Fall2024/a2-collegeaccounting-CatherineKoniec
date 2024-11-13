@@ -9,3 +9,12 @@ public abstract class Person {
         this.name = name;
         this.address = address;
     }
+    // Getter methods:
+    // Retrieves the person's name
+    public String getName() {
+        return name;
+    }
+    // Retrieves the person's address
+    public String getAddress() {
+        return address;
+    }
