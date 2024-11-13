@@ -125,3 +125,13 @@ public class Main {
             report.append(i + 1).append(".").append(staffMember.toString()).append("\n");
             totalOutgoing += staffMember.getBiWeeklyPay();
         }
+
+// Adding financial summary
+        report.append("\nResults:\n");
+        report.append("Outgoing: ").append(currencyFormatter.format(totalOutgoing)).append("\n");
+        report.append("Incoming: ").append(currencyFormatter.format(totalIncoming)).append("\n");
+        report.append("Total: ").append(currencyFormatter.format(totalIncoming - totalOutgoing));
+
+        JOptionPane.showMessageDialog(null, report.toString(), "Report", JOptionPane.INFORMATION_MESSAGE);
+    }
+}
