@@ -46,7 +46,7 @@ public class Main {
             }
         }
     }
-    /* Handles the addition of a new student
+    /* Handles the addition of a new student:
      * Validates student year (1-4)
      * Collects and validates name and address
      * Creates new student object and adds to collection
