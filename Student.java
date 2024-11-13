@@ -1,3 +1,8 @@
+// Student: Catherine Koniec
+// Student #: W0497826
+// Description: Assignment 2 - College Accounting Application
+
+
 /* Student class representing college students
  * Handles student-specific attributes and fee calculations
  * Implements private attributes for year and fees
